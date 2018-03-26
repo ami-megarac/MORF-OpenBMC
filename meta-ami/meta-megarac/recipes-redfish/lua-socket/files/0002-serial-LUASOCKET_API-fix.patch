@@ -1,0 +1,11 @@
+--- git/src/serial.c	2017-10-03 12:30:16.084405714 -0400
++++ git/src/serial.c	2017-10-03 12:27:45.021078625 -0400
+@@ -13,6 +13,8 @@
+ #include "unix.h"
+ #include <sys/un.h>
+ 
++#include "luasocket.h"
++
+ /*
+ Reuses userdata definition from unix.h, since it is useful for all
+ stream-like objects.

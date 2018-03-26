@@ -1,0 +1,18 @@
+[Unit]
+Description=AMI Redfish Server
+SourcePath=/usr/local/bin/redfish-server
+After=redis-server.service
+
+[Service]
+Type=forking
+Restart=no
+TimeoutSec=5min
+IgnoreSIGPIPE=no
+KillMode=process
+GuessMainPID=no
+RemainAfterExit=yes
+ExecStart=/usr/local/bin/redfish-server start
+ExecStop=/usr/local/bin/redfish-server stop
+
+[Install]
+WantedBy=multi-user.target

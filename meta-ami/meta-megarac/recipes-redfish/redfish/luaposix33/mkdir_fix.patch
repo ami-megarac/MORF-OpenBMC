@@ -1,0 +1,17 @@
+Index: git/local.mk
+===================================================================
+--- git/local.mk
++++ git/local.mk
+@@ -255,11 +255,10 @@
+ allhtml = $(dist_doc_DATA) $(dist_examples_DATA) $(dist_modules_DATA) $(dist_classes_DATA)
+ 
+ $(allhtml): $(EXTRA_ext_posix_posix_la_SOURCES) $(ext_posix_posix_la_SOURCES)
+-	test -d $(builddir)/doc || mkdir $(builddir)/doc
++	test -d $(builddir)/doc || $(MKDIR_P) $(builddir)/doc
+ if HAVE_LDOC
+ 	$(LDOC) -c build-aux/config.ld -d $(abs_srcdir)/doc .
+ else
+-	$(MKDIR_P) doc
+ 	touch doc/index.html doc/ldoc.css
+ endif
+ 

@@ -1,0 +1,18 @@
+--- git/src/makefile	2018-03-19 18:46:26.518464048 -0400
++++ git/src/makefile	2018-03-19 19:06:12.855362826 -0400
+@@ -284,6 +284,7 @@
+ 	timeout.$(O) \
+ 	io.$(O) \
+ 	usocket.$(O) \
++	compat.$(O) \
+ 	unix.$(O)
+ 
+ #------
+@@ -296,6 +297,7 @@
+ 	timeout.$(O) \
+ 	io.$(O) \
+ 	usocket.$(O) \
++	compat.$(O) \
+ 	serial.$(O)
+ 
+ #------

@@ -1,0 +1,11 @@
+--- git/Makefile	2018-03-21 21:09:06.682125496 -0400
++++ git/Makefile	2018-03-21 21:15:03.419953405 -0400
+@@ -30,7 +30,7 @@
+ 	$(CC) -o $(LIBNAME) -shared $(OBJNAME) $(LFLAGS)
+ 
+ install: $(LIBNAME)
+-	install -D -s $(LIBNAME) $(DESTDIR)$(INSTALL_PATH)/$(LIBNAME)
++	install -D $(LIBNAME) $(DESTDIR)$(INSTALL_PATH)/$(LIBNAME)
+ 
+ clean:
+ 	$(RM) $(LIBNAME) $(OBJNAME)
