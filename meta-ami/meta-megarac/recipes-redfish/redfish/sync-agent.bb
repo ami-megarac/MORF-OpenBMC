@@ -3,7 +3,7 @@ SECTION = "redfish"
 LICENSE = "Apache-2.0"
 LIC_FILES_CHKSUM = "file://${PHOSPHORBASE}/COPYING.apache-2.0;md5=34400b68072d710fecd0a2940a0d1658"
 
-SRCREV = "5715d992508c230f2f3e9e6eb978eaa4d430cc5d"
+SRCREV = "1f1122609f281c56c9d608b9d59b797e0a88a0bf"
 SRC_URI = "git://github.com/ami-megarac/MORF-SyncAgent.git \
 		   file://sync-agent.service \
 		   file://Makefile \
