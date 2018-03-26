@@ -3,10 +3,11 @@ LICENSE = "MIT"
 HOMEPAGE = "http://hoelz.ro/projects/linotify"
 LIC_FILES_CHKSUM = "file://${COMMON_LICENSE_DIR}/MIT;md5=0835ade698e0bcf8506ecda2f7b4f302"
 
-DEPENDS += "luajit lua5.1 inotify-tools"
+DEPENDS += "lua5.1 luajit inotify-tools"
 
 SRC_URI = "git://github.com/hoelzro/linotify.git;protocol=git \
 		   file://disable-strip.patch \
+		   file://hardcode_luajit_name.patch \
 		   "
 
 SRCREV = "a56913e9c0922befb65227a00cf69c2e8052de1a"

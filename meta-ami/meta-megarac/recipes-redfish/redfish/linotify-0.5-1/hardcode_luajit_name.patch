@@ -1,0 +1,11 @@
+--- git/Makefile	2018-03-26 14:09:04.945253136 -0400
++++ git/Makefile	2018-03-26 16:36:09.125004533 -0400
+@@ -8,7 +8,7 @@
+ OMIT_FRAME_POINTER = -fomit-frame-pointer
+ 
+ # Seach for lua .pc file
+-LUAPKG_CMD = $(shell pkg-config --list-all | grep Lua | awk 'FNR == 1 {print $$1}')
++LUAPKG_CMD = luajit
+ CFLAGS = -fPIC -O3 -Wall $(shell pkg-config "$(LUAPKG_CMD)" --cflags)
+ LFLAGS = -shared $(OMIT_FRAME_POINTER)
+ INSTALL_PATH = $(shell pkg-config "$(LUAPKG_CMD)" --variable=INSTALL_CMOD)
