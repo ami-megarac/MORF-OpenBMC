@@ -1,5 +1,5 @@
 [Unit]
-Description=AMI Redfish Server
+Description=MORF REST Server
 SourcePath=/usr/local/bin/redfish-server
 After=redis-server.service
 

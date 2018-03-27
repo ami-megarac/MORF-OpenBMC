@@ -16,7 +16,7 @@
 --				segment of the key. i.e. you can give a collection name and the instance ID of the resource will be captured. As with the
 --				number pattern above, the key will be split along the delimiter ':' into an array, then the array is searched for the resource
 --				name provided, and the next array entry is used to substitute into group_name. NOTE: only exact matches will work, so be careful
---				about what name is actually used by AMI's Redfish, e.g.: redis key uses NetworkProtocol for Redfish's ManagerNetworkProtocol 
+--				about what name is actually used by MORF Redfish Framework, e.g.: redis key uses NetworkProtocol for Redfish's ManagerNetworkProtocol 
 --				resource, ':Manager" will not match Managers, matches are case-sensitive, etc.
 -- Argument examples:
 -- map entry:

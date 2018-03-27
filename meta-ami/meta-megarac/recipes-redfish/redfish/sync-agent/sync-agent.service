@@ -1,5 +1,5 @@
 [Unit]
-Description=AMI Redfish Sync Agent
+Description=MORF Sync Agent
 SourcePath=/usr/local/bin/sync-agent
 After=redis-server.service
 

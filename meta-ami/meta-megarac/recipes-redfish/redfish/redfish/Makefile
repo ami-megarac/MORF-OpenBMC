@@ -1,4 +1,4 @@
-## AMI Open Redfish Makefile for installation.
+## MORF REST Server Makefile for installation.
 
 PREFIX ?= /usr/local
 INSTALL_MODULE= $(PREFIX)/redfish

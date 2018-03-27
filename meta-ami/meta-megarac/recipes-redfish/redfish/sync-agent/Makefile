@@ -1,4 +1,4 @@
-## AMI Open Redfish Makefile for installation.
+## MORF SyncAgent Makefile for installation.
 
 PREFIX ?= /usr/local
 INSTALL_MODULE= $(PREFIX)/sync-agent
