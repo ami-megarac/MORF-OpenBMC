@@ -1,0 +1,34 @@
+diff --git a/meta-openbmc-machines/meta-ami/meta-olympus/conf/bblayers.conf.sample b/meta-openbmc-machines/meta-ami/meta-olympus/conf/bblayers.conf.sample
+index 90344a0..718642d 100644
+--- a/meta-openbmc-machines/meta-ami/meta-olympus/conf/bblayers.conf.sample
++++ b/meta-openbmc-machines/meta-ami/meta-olympus/conf/bblayers.conf.sample
+@@ -12,6 +12,7 @@ BBLAYERS ?= " \
+   ##OEROOT##/import-layers/meta-openembedded/meta-networking \
+   ##OEROOT##/import-layers/meta-openembedded/meta-perl \
+   ##OEROOT##/import-layers/meta-openembedded/meta-python \
++  ##OEROOT##/import-layers/meta-openembedded/meta-webserver \
+   ##OEROOT##/import-layers/meta-virtualization \
+   ##OEROOT##/meta-phosphor \
+   ##OEROOT##/meta-ami \
+@@ -19,6 +20,7 @@ BBLAYERS ?= " \
+   ##OEROOT##/meta-openbmc-bsp/meta-aspeed/meta-ast2400 \
+   ##OEROOT##/meta-openbmc-machines/meta-ami \
+   ##OEROOT##/meta-openbmc-machines/meta-ami/meta-olympus \
++  ##OEROOT##/meta-ami/meta-megarac \
+   "
+ BBLAYERS_NON_REMOVABLE ?= " \
+   ##OEROOT##/meta \
+@@ -27,6 +29,7 @@ BBLAYERS_NON_REMOVABLE ?= " \
+   ##OEROOT##/import-layers/meta-openembedded/meta-networking \
+   ##OEROOT##/import-layers/meta-openembedded/meta-perl \
+   ##OEROOT##/import-layers/meta-openembedded/meta-python \
++  ##OEROOT##/import-layers/meta-openembedded/meta-webserver \
+   ##OEROOT##/import-layers/meta-virtualization \
+   ##OEROOT##/meta-phosphor \
+   ##OEROOT##/meta-ami \
+@@ -34,4 +37,5 @@ BBLAYERS_NON_REMOVABLE ?= " \
+   ##OEROOT##/meta-openbmc-bsp/meta-aspeed/meta-ast2400 \
+   ##OEROOT##/meta-openbmc-machines/meta-ami \
+   ##OEROOT##/meta-openbmc-machines/meta-ami/meta-olympus \
++  ##OEROOT##/meta-ami/meta-megarac \
+   "

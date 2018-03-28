@@ -1,0 +1,10 @@
+diff --git a/meta-openbmc-machines/meta-ami/meta-olympus/conf/local.conf.sample b/meta-openbmc-machines/meta-ami/meta-olympus/conf/local.conf.sample
+index ed8fb71..fa7dc93 100644
+--- a/meta-openbmc-machines/meta-ami/meta-olympus/conf/local.conf.sample
++++ b/meta-openbmc-machines/meta-ami/meta-olympus/conf/local.conf.sample
+@@ -243,3 +243,5 @@ INHERIT += "extrausers"
+ EXTRA_USERS_PARAMS = " \
+   usermod -p '\$1\$UGMqyqdG\$FZiylVFmRRfl9Z0Ue8G7e/' root; \
+   "
++
++IMAGE_INSTALL_append += " lua5.1 luajit redis redfish sync-agent inotify-tools linotify openssl-dev openssl turbolua luaposix33 bit32 lua-socket lua-filesystem nginx lua-dbus ldbus"
