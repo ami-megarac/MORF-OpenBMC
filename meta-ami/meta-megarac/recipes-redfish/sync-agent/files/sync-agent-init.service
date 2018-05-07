@@ -1,0 +1,10 @@
+[Unit]
+Description=MORF Sync Agent
+PartOf=sync-agent.service
+
+[Service]
+Type=simple
+ExecStart=/bin/sh -c "cd /usr/local/sync-agent && luajit subagents/init-agent.lua"
+
+[Install]
+WantedBy={SYSTEMD_DEFAULT_TARGET}

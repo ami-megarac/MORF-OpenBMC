@@ -1,0 +1,15 @@
+[Unit]
+Description=MORF Sync Agent
+Wants=sync-agent-init.service sync-agent-rfgrps.service sync-agent-rffns.service
+After=redis-server.service
+
+[Service]
+Type=forking
+PIDFile=/var/run/sync-agent.pid
+ExecStart=/bin/sh -c "cd /usr/local/sync-agent && luajit agent.lua"
+KillSignal=SIGKILL
+KillMode=control-group
+Restart=always
+
+[Install]
+WantedBy={SYSTEMD_DEFAULT_TARGET}

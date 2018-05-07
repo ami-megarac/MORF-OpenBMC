@@ -1,0 +1,15 @@
+[Unit]
+Description=MORF REST Server
+Wants=redfish-db-init.service
+After=redis-server.service
+
+[Service]
+Type=forking
+PIDFile=/var/run/redfish-server.pid
+ExecStart=/bin/sh -c "cd /usr/local/redfish && luajit server.lua"
+KillSignal=SIGKILL
+KillMode=control-group
+Restart=always
+
+[Install]
+WantedBy={SYSTEMD_DEFAULT_TARGET}

@@ -1,0 +1,14 @@
+[Unit]
+Description=MORF Sync Agent
+PartOf=sync-agent.service
+
+[Service]
+Type=forking
+PIDFile=/var/run/redfish2redfishgroup.pid
+ExecStart=/bin/sh -c "cd /usr/local/sync-agent && luajit subagents/redfish-2-redfishgroup.lua"
+KillSignal=SIGKILL
+KillMode=control-group
+Restart=always
+
+[Install]
+WantedBy={SYSTEMD_DEFAULT_TARGET}

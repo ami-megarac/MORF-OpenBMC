@@ -1,0 +1,11 @@
+[Unit]
+Description=MORF REST Server
+PartOf=redfish-server.service
+After=redis-server.service
+
+[Service]
+ExecStart=/bin/sh -c "cd /usr/local/redfish && db_init/redis-init.sh"
+Type=simple
+
+[Install]
+WantedBy={SYSTEMD_DEFAULT_TARGET}

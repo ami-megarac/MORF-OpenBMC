@@ -1,9 +1,9 @@
 [Unit]
 Description=Redis-server daemon
+After=clear-once.service
 
 [Service]
 Type=forking
-After=clear-once.service
 Restart=always
 ExecStartPre=-/bin/mkdir -p /run/redis
 ExecStart=/usr/bin/redis-server /etc/redis/redis.conf
